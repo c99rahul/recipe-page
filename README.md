@@ -17,6 +17,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 If you overlay the design images onto the final layout for both mobile and desktop, you wouldn't notice much difference in terms of spacing and sizing, which was exactly what I aimed for.
 
+Following achieving pixel-perfect precision, my next objective was to utilize as much semantic HTML as possible. I accomplished this by incorporating tags such as `<header>`, `<article>`, `<section>`, and `<footer>`, which provide numerous built-in benefits, including improved accessibility.
+
 ### Built with
 
 - Mobile-first workflow (Progressive development)
