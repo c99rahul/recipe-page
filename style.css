@@ -1,0 +1,349 @@
+:root {
+  --global-leading: 150%;
+  --global-font-size: 100%;
+
+  --primary-font: "Outfit", sans-serif;
+  --secondary-font: "Young Serif", serif;
+
+  --container-width: 46em;
+  --container-space-inner: 2em;
+  --container-space-outer-block: 7.5em;
+  --container-radius: 1.5em;
+
+  --para-space: 1.5em;
+
+  --h1-font-size: 2.25em;
+  --h2-font-size: 1.75em;
+  --h1-h2-space-top: 1rem;
+  --h1-h2-space-bottom: 1.5rem;
+
+  --h3-font-size: 1.3em;
+  --h3-space-top: 1em;
+  --h3-space-bottom: 1rem;
+
+  --list-space-left-outer: 1.5em;
+  --list-space-left-inner: 1em;
+  --list-space-gap: 0.5em;
+
+  --table-space-inline: 0.7em;
+  --table-space-block: 2em;
+
+  --header-img-radius: 0.75em;
+
+  --slab-space-outer-block: 2em;
+  --slab-space-inner: 1.5em;
+  --slab-radius: 1em;
+
+  --hr-space: 2em;
+
+  --credits-space-inner: 1em;
+  --credits-font-size: 75%;
+
+  --color-primary-white: hsl(0 0% 100%);
+  --color-primary-eggshell: hsl(30 54% 90%);
+
+  --color-secondary-rose-white: hsl(330 100% 98%);
+  --color-secondary-light-grey: hsl(30 18% 87%);
+  --color-secondary-dark-charcoal: hsl(24 5% 18%);
+  --color-secondary-wenge-brown: hsl(30 10% 34%);
+
+  --color-accent-nutmeg: hsl(14 45% 36%);
+  --color-accent-dark-raspberry: hsl(332 51% 32%);
+
+  font-size: var(--global-font-size);
+}
+
+/* Font setup */
+@font-face {
+  font-family: "Young Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
+/*
+ * Basic reset
+ * @link https://github.com/c99rahul/base-css
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+header,
+main,
+footer,
+article,
+aside,
+section,
+nav,
+p,
+blockquote,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+abbr,
+acronym,
+cite,
+code,
+dfn,
+em,
+q,
+strong,
+samp,
+var,
+time,
+mark,
+small,
+del,
+ins,
+sub,
+sup,
+kbd,
+tt,
+s,
+strike,
+big,
+img,
+audio,
+video,
+figure,
+figcaption,
+form,
+input,
+textarea,
+button,
+select,
+option,
+optgroup,
+label,
+fieldset,
+legend,
+datalist,
+keygen,
+progress,
+meter,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+object,
+iframe,
+embed,
+br,
+hr,
+canvas {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  vertical-align: baseline;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography */
+body {
+  font: 1em / var(--global-leading) var(--primary-font);
+  color: var(--color-secondary-wenge-brown);
+  background-color: var(--color-primary-eggshell);
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p:not(:last-child) {
+  margin-bottom: var(--para-space);
+}
+
+h1,
+h2 {
+  font-family: var(--secondary-font);
+  margin-top: var(--h1-h2-space-top);
+  margin-bottom: var(--h1-h2-space-bottom);
+}
+h2,
+h3 {
+  color: var(--color-accent-nutmeg);
+}
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child {
+  margin-top: 0;
+}
+h1 {
+  color: var(--color-secondary-dark-charcoal);
+  font-size: var(--h1-font-size);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+h3 {
+  font-weight: bold;
+  font-size: var(--h3-font-size);
+  margin-top: var(--h3-space-top);
+  margin-bottom: var(--h3-space-bottom);
+}
+
+ul,
+ol {
+  margin-left: var(--list-space-left-outer);
+}
+li {
+  padding-left: var(--list-space-left-inner);
+}
+li + li {
+  margin-top: var(--list-space-gap);
+}
+li::marker {
+  color: var(--color-accent-nutmeg);
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+td,
+tr,
+table {
+  border-collapse: collapse;
+}
+tr + tr {
+  border-top: 1px solid var(--color-secondary-light-grey);
+}
+/* <Padding-tweaks> */
+th {
+  padding: var(--table-space-inline) var(--table-space-inline)
+    var(--table-space-inline) var(--table-space-block);
+}
+td {
+  padding: var(--table-space-inline) var(--table-space-block)
+    var(--table-space-inline) 0;
+}
+tr:first-child th,
+tr:first-child td {
+  padding-top: 0;
+}
+/* </Padding-tweaks> */
+td {
+  font-weight: bold;
+  color: var(--color-accent-nutmeg);
+}
+th {
+  color: inherit;
+}
+
+hr {
+  height: 1px;
+  border-width: 0;
+  margin: var(--hr-space) 0;
+  background-color: var(--color-secondary-light-grey);
+}
+
+/* Containers */
+.site-container {
+  background-color: var(--color-primary-white);
+  max-width: var(--container-width);
+}
+
+.site-copy {
+  padding: var(--container-space-inner);
+}
+
+.content-slab {
+  padding: var(--slab-space-inner);
+  margin-top: var(--slab-space-outer-block);
+  margin-bottom: var(--slab-space-outer-block);
+  background-color: var(--color-secondary-rose-white);
+  border-radius: var(--slab-radius);
+}
+.content-slab h3 {
+  color: var(--color-accent-dark-raspberry);
+  margin-top: 0;
+}
+.content-slab li::marker {
+  color: var(--color-accent-dark-raspberry);
+}
+
+.attribution {
+  padding: var(--credits-space-inner);
+  text-align: center;
+}
+.attribution p {
+  font-size: var(--credits-font-size);
+}
+.attribution a {
+  color: var(--color-secondary-dark-charcoal);
+}
+
+/* Desktop-only media settings */
+@media only screen and (min-width: 48em) {
+  :root {
+    --container-space-inner: 2.5em;
+    --h1-font-size: 2.5em;
+  }
+
+  body {
+    background-image: none;
+  }
+
+  td {
+    padding-left: var(--table-space-block);
+  }
+
+  .site-container {
+    margin: var(--container-space-outer-block) auto;
+    border-radius: var(--container-radius);
+  }
+
+  .site-copy,
+  .site-hero {
+    padding: var(--container-space-inner);
+  }
+
+  .site-hero {
+    padding-bottom: 0;
+  }
+
+  .site-hero-img {
+    border-radius: var(--header-img-radius);
+  }
+}
