@@ -1,0 +1,71 @@
+:root {
+  --leading__global: 1.5;
+  --leading__headings: 1;
+
+  --font-stack__global: "Outfit", sans-serif;
+  --font-stack__headings: "Young Serif", serif;
+
+  --size__global: 100%;
+  --size__heading-large: 2.25em;
+  --size__heading-medium: 1.75em;
+  --size__heading-small: 1.25em;
+
+  --width__container: 46em;
+
+  --height__horizontal-rule: 1px;
+
+  --dim__list-item-bullet: 0.25em;
+
+  --border-width__table-cell__bottom: 1px;
+
+  --inner-spacing__hero: 0;
+  --inner-spacing__article: 2.5em 2em;
+  --inner-spacing__content-slab: 1.5em;
+  --inner-spacing__list-item__left: 2em;
+  --inner-spacing__table-cell__inline: 2rem;
+  --inner-spacing__table-cell__bottom: 0.75em;
+
+  --outer-spacing__heading-large__bottom: 1.5rem;
+  --outer-spacing__heading-medium__bottom: 1.5rem;
+  --outer-spacing__heading-small__bottom: 1rem;
+  --outer-spacing__container__block: 0;
+  --outer-spacing__content-slab__block: 2em;
+  --outer-spacing__list-item__left: 0.5em;
+  --outer-spacing__table-cell__bottom: 0.75em;
+  --outer-spacing__horizontal-rule__block: 2em;
+
+  --gap__list-items: 0.5em;
+  --gap__table-cell__inline: 1em;
+
+  --radius__container: 0;
+  --radius__hero-img: 0;
+  --radius__content-slab: 0.75em;
+  --radius__list-item-bullet: 50%;
+
+  --color-primary-white: hsl(0 0 100);
+  --color-primary-eggshell: hsl(30 54 90);
+  --color-secondary-rose-white: hsl(330 100 98);
+  --color-secondary-light-grey: hsl(30 18 87);
+  --color-secondary-dark-charcoal: hsl(24 5 18);
+  --color-secondary-wenge-brown: hsl(30 10 34);
+  --color-accent-nutmeg: hsl(14 45 36);
+  --color-accent-dark-raspberry: hsl(332 51 32);
+
+  font-size: var(--global-font-size);
+}
+
+/* 
+ * Modifying the settings for a bigger viweport area. This is how the 
+ * basic progressive enhancement approach looks like.
+ */
+@media only screen and (min-width: 48em) {
+  :root {
+    --inner-spacing__article: 2.5rem;
+    --radius__container: 1.5em;
+    --radius__hero-img: 0.75em;
+    --outer-spacing__container__block: 7.6875em;
+    --size__heading-large: 2.5em;
+    --inner-spacing__content-slab: 1.75em;
+    --inner-spacing__hero: 2.5em;
+  }
+}

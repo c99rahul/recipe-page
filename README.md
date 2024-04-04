@@ -2,6 +2,8 @@
 
 This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+This repository contains all the provided challenge files as well as the finished HTML and CSS to implement the expected [design](./design/).
+
 ## Overview
 
 ### Screenshot

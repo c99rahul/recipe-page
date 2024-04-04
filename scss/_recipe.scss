@@ -1,0 +1,174 @@
+/* Basic body */
+body {
+  font: 1em / var(--leading__global) var(--font-stack__global);
+  color: var(--color-secondary-wenge-brown);
+  background-color: var(--color-primary-eggshell);
+}
+/* Typography settings */
+b,
+strong {
+  font-weight: 700;
+}
+p {
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+}
+h1 {
+  font-size: var(--size__heading-large);
+  margin-bottom: var(--outer-spacing__heading-large__bottom);
+}
+h2 {
+  font-size: var(--size__heading-medium);
+  margin-bottom: var(--outer-spacing__heading-medium__bottom);
+}
+h3 {
+  font-size: var(--size__heading-small);
+  margin-bottom: var(--outer-spacing__heading-small__bottom);
+}
+h1,
+h2,
+h3 {
+  line-height: var(--leading__headings);
+  font-family: var(--font-stack__headings);
+  color: var(--color-accent-nutmeg);
+}
+li + li {
+  margin-top: var(--gap__list-items);
+}
+/* Customized lists */
+ul,
+ol {
+  li {
+    display: block;
+    position: relative;
+    padding-left: var(--inner-spacing__list-item__left);
+    margin-left: var(--outer-spacing__list-item__left);
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "";
+    }
+  }
+}
+ul {
+  li {
+    &:before {
+      height: var(--dim__list-item-bullet);
+      width: var(--dim__list-item-bullet);
+      border-radius: var(--radius__list-item-bullet);
+      background-color: var(--color-accent-nutmeg);
+
+      top: calc(50% - var(--dim__list-item-bullet) / 2);
+      transform: translateX(calc(-50% + var(--dim__list-item-bullet) / 2));
+    }
+  }
+}
+ol {
+  counter-reset: numbered-list;
+  li {
+    &:before {
+      color: var(--color-accent-nutmeg);
+      content: counter(numbered-list) ".";
+      font-weight: 700;
+      counter-increment: numbered-list;
+    }
+  }
+}
+/* Tweaking tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+tr {
+  &:not(:first-child) {
+    td,
+    th {
+      padding-top: calc(
+        var(--inner-spacing__table-cell__bottom) -
+          var(--border-width__table-cell__bottom) / 2
+      );
+    }
+  }
+  &:not(:last-child) {
+    border-bottom: var(--border-width__table-cell__bottom) solid
+      var(--color-secondary-light-grey);
+    td,
+    th {
+      padding-bottom: calc(
+        var(--inner-spacing__table-cell__bottom) -
+          var(--border-width__table-cell__bottom) / 2
+      );
+    }
+  }
+}
+td,
+th {
+  padding-left: calc(var(--gap__table-cell__inline) / 2);
+  padding-right: calc(var(--gap__table-cell__inline) / 2);
+  &:first-child {
+    padding-left: var(--inner-spacing__table-cell__inline);
+  }
+  &:last-child {
+    padding-right: var(--inner-spacing__table-cell__inline);
+  }
+}
+td {
+  font-weight: 700;
+}
+/* Horizontal rule */
+hr {
+  margin-top: calc(
+    var(--outer-spacing__horizontal-rule__block) -
+      var(--height__horizontal-rule) / 2
+  );
+  margin-bottom: calc(
+    var(--outer-spacing__horizontal-rule__block) -
+      var(--height__horizontal-rule) / 2
+  );
+  height: var(--height__horizontal-rule);
+  border-width: 0;
+  background-color: var(--color-secondary-light-grey);
+}
+/* Main container */
+.site-container {
+  margin: var(--outer-spacing__container__block) auto;
+  max-width: var(--width__container);
+  background-color: var(--color-primary-white);
+  border-radius: var(--radius__container);
+}
+/* Hero area */
+.site-hero {
+  padding: var(--inner-spacing__hero) var(--inner-spacing__hero) 0;
+  img {
+    border-radius: var(--radius__hero-img);
+  }
+}
+/* Copy container */
+.site-copy {
+  padding: var(--inner-spacing__article);
+  .site-copy-title {
+    color: var(--color-secondary-dark-charcoal);
+  }
+}
+/* Content box */
+.content-slab {
+  padding: var(--inner-spacing__content-slab);
+  margin: var(--outer-spacing__content-slab__block) 0;
+  background-color: var(--color-secondary-rose-white);
+  border-radius: var(--radius__content-slab);
+  h3 {
+    font-family: var(--font-stack__global);
+    font-weight: 600;
+    color: var(--color-accent-dark-raspberry);
+  }
+  ul {
+    li {
+      &::before {
+        background-color: var(--color-accent-dark-raspberry);
+      }
+    }
+  }
+}
