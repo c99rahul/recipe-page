@@ -26,6 +26,7 @@ Following achieving pixel-perfect precision, my next objective was to utilize as
 - Mobile-first workflow (Progressive development)
 - Semantic HTML5 markup
 - CSS custom properties
+- Sass (SCSS)
 
 ### What I learned
 
