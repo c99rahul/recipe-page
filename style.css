@@ -6,90 +6,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html,
-body,
-div,
-span,
-header,
-main,
-footer,
-article,
-aside,
-section,
-nav,
-p,
-blockquote,
-pre,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-abbr,
-acronym,
-cite,
-code,
-dfn,
-em,
-q,
-strong,
-samp,
-var,
-time,
-mark,
-small,
-del,
-ins,
-sub,
-sup,
-kbd,
-tt,
-s,
-strike,
-big,
-img,
-audio,
-video,
-figure,
-figcaption,
-form,
-input,
-textarea,
-button,
-select,
-option,
-optgroup,
-label,
-fieldset,
-legend,
-datalist,
-keygen,
-progress,
-meter,
-ul,
-ol,
-li,
-dl,
-dt,
-dd,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-object,
-iframe,
-embed,
-br,
-hr,
-canvas {
   margin: 0;
   padding: 0;
   font: inherit;
@@ -165,7 +81,7 @@ img {
 @font-face {
   font-family: "Outfit";
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 200 700;
   font-display: swap;
   src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
 }
@@ -178,7 +94,7 @@ img {
 }
 /* Basic body */
 body {
-  font: 1em/var(--leading__global) var(--font-stack__global);
+  font: 300 1em/var(--leading__global) var(--font-stack__global);
   color: var(--color-secondary-wenge-brown);
   background-color: var(--color-primary-eggshell);
 }
