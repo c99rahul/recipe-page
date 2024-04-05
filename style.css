@@ -179,7 +179,7 @@ img {
 }
 /* Basic body */
 body {
-  font: 400 1em/var(--leading__global) var(--font-stack__global);
+  font: 300 1em/var(--leading__global) var(--font-stack__global);
   color: var(--color-secondary-wenge-brown);
   background-color: var(--color-primary-eggshell);
 }
