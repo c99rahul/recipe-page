@@ -94,7 +94,6 @@ canvas {
   padding: 0;
   font: inherit;
   text-align: inherit;
-  vertical-align: baseline;
 }
 
 /* Responsive images */
@@ -166,7 +165,7 @@ img {
 @font-face {
   font-family: "Outfit";
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400 700;
   font-display: swap;
   src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
 }
@@ -179,7 +178,7 @@ img {
 }
 /* Basic body */
 body {
-  font: 300 1em/var(--leading__global) var(--font-stack__global);
+  font: 1em/var(--leading__global) var(--font-stack__global);
   color: var(--color-secondary-wenge-brown);
   background-color: var(--color-primary-eggshell);
 }
@@ -291,6 +290,7 @@ th:last-child {
 }
 
 td {
+  color: var(--color-accent-nutmeg);
   font-weight: 700;
 }
 
